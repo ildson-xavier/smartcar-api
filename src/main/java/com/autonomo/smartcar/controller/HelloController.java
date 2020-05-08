@@ -10,6 +10,6 @@ public class HelloController {
 	@RequestMapping("/")
 	@ResponseBody
 	public String hello() {
-		return "Hello";
+		return "Hello Jenkins";
 	}
 }
