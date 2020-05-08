@@ -13,6 +13,7 @@
 	<artifactId>smartcar</artifactId>
 	<version>1.0</version>
 	<name>smartcar</name>
+	<packaging>war</packaging>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
