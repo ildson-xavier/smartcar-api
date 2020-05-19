@@ -7,13 +7,12 @@ pipeline {
     stages {
         stage ('Build back') {
             steps {
-                sh "mvn clean install -DskipTests"
+                sh "mvn clean install -DskipTests=true"
             }
         }
-        stage ('Meio') {
+        stage ('Unit Test') {
             steps {
-                sh 'echo meio'
-                sh 'echo meio de novo'
+                sh 'mvn test'
             }
         }
         stage ('Fim') {
