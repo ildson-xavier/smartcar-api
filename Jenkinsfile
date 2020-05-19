@@ -2,9 +2,9 @@ pipeline {
     agent any
     
     stages {
-        stage ('Inicio') {
+        stage ('Build back') {
             steps {
-                sh 'echo Inicio'
+                sh 'mvn clean install -DskipTests'
             }
         }
         stage ('Meio') {
