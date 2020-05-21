@@ -20,7 +20,9 @@ pipeline {
                 scannerHome = tool 'SONAR_SCANNER'
             }
             steps {
-                sh "${scannerHome}/bin/sonar-scanner -e -Dsonar.projectKey=SONAR_SMART_CAR -Dsonar.host.url=http://localhost:9000 -Dsonar.login=dceebb57eb017156d4830137f01ea457810c0e25 -Dsonar.java.binaries=target"
+                withSonarQubeEnv('SONAR_LOCAL') {
+                    sh "${scannerHome}/bin/sonar-scanner -e -Dsonar.projectKey=SONAR_SMART_CAR -Dsonar.host.url=http://localhost:9000 -Dsonar.login=dceebb57eb017156d4830137f01ea457810c0e25 -Dsonar.java.binaries=target"
+                }
             }
         }
     }
