@@ -28,7 +28,7 @@ pipeline {
         stage ('Copiar arquivo') {
             steps {
                 echo pwd()
-                sh "cp -ar /Users/ildsonmoraes/Documents/Estudos/Projetos/Jenkins/arq.txt /Users/ildsonmoraes/.jenkins/workspace/Pipeline/src/main/resources/"
+                sh "mv /Users/ildsonmoraes/Documents/Estudos/Projetos/Jenkins/arq.txt /Users/ildsonmoraes/.jenkins/workspace/Pipeline/src/main/resources/"
             }
         }
     }
