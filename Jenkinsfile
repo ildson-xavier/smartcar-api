@@ -27,8 +27,7 @@ pipeline {
         }
         stage ('Copiar arquivo') {
             steps {
-                def wd = pwd()
-                echo wd
+                echo pwd()
                 sh "cp /Users/ildsonmoraes/Documents/Estudos/Projetos/Jenkins/arq.txt /Users/ildsonmoraes/.jenkins/workspace/Pipeline/src/main/resources/"
             }
         }
