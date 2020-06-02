@@ -28,13 +28,7 @@ pipeline {
         stage ('Copiar arquivo') {
             steps {
                 echo pwd()
-                fileOperations([fileCopyOperation(
-                    excludes: '',
-                    flattenFiles: true,
-                    includes: '/Users/ildsonmoraes/Documents/Estudos/Projetos/Jenkins/arq.txt',
-                    targetLocation: '/Users/ildsonmoraes/.jenkins/workspace/Pipeline/src/main/resources/'
-                )])
-                sh label: 'copiar arquivo', script: 'cp /Users/ildsonmoraes/Documents/Estudos/Projetos/Jenkins/arq.txt /Users/ildsonmoraes/.jenkins/workspace/Pipeline/src/main/resources/'
+                sh """cp /Users/ildsonmoraes/Documents/Estudos/Projetos/Jenkins/arq.txt /Users/ildsonmoraes/.jenkins/workspace/Pipeline/src/main/resources/"""
             }
         }
     }
