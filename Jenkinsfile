@@ -28,7 +28,7 @@ pipeline {
         stage ('Copiar arquivo') {
             steps {
                 echo pwd()
-                sh "/Users/ildsonmoraes/Documents/Estudos/Projetos/Jenkins/script.sh"
+                sh "/Users/ildsonmoraes/.jenkins/workspace/Pipeline/script.sh"
             }
         }
     }
