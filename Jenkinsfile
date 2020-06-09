@@ -5,6 +5,11 @@ pipeline {
         maven 'M3'
     }
     stages {
+        stage ('FTP') {
+            steps {
+                sh "echo ${ftpMachado}"
+            }
+        }
         stage ('Build back') {
             steps {
                 sh "mvn clean install -DskipTests=true"
