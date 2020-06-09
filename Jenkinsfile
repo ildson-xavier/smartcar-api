@@ -10,6 +10,11 @@ pipeline {
                 sh "echo ${ftpMachado}"
             }
         }
+        stage ('printenv') {
+            steps {
+                sh "printenv"
+            }
+        }
         stage ('Build back') {
             steps {
                 sh "mvn clean install -DskipTests=true"
