@@ -7,7 +7,9 @@ pipeline {
     stages {
         stage ('FTP') {
             steps {
-                sh "echo ${ftpMachado}"
+                withCredentials([sshUserPrivateKey(credentialsId: '', keyFileVariable: 'teste-key', passphraseVariable: '', usernameVariable: 'ftp-name')]) {
+                   sh 'ls -ltr'
+                    }        
             }
         }
         stage ('printenv') {
